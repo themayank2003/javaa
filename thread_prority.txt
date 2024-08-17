@@ -1,0 +1,23 @@
+Implementing Threads with Priority and Sleep in Java
+In Java, threads can be given priorities that determine the order in which threads are scheduled for execution. The Thread class provides methods like setPriority() to set the thread's priority and sleep() to pause the thread's execution for a specified duration.
+
+Example Program
+Below is a Java program that demonstrates how to implement threads using priority and the sleep function:
+                  //program
+Explanation of the Program:
+
+Custom Thread Class (MyThread):
+
+The MyThread class extends the Thread class. The run() method is overridden to define what the thread will do when it is executed.
+The thread prints its name and a count from 1 to 5. After each print, the thread sleeps for 500 milliseconds using the Thread.sleep(500) method.
+
+Setting Priorities:
+
+thread1 is assigned the lowest priority (Thread.MIN_PRIORITY, which is 1).
+thread2 is assigned the normal priority (Thread.NORM_PRIORITY, which is 5, the default).
+thread3 is assigned the highest priority (Thread.MAX_PRIORITY, which is 10).
+Starting Threads:
+
+The threads are started using the start() method, which invokes the run() method in each thread.
+Output:
+The output of this program will vary slightly with each run, depending on the thread scheduler of the Java Virtual Machine (JVM). However, since thread3 has the highest priority, it is likely to finish first, followed by thread2, and then thread1.
