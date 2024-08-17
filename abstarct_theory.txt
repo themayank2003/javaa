@@ -1,0 +1,29 @@
+Abstract Classes:
+
+Definition: An abstract class in Java is a class that cannot be instantiated on its own and is meant to be subclassed. It can contain abstract methods (methods without a body) as well as concrete methods (methods with an implementation).
+
+Usage: Abstract classes are used when you want to provide a common base for several related classes, sharing code among them. They are suitable when the classes share a common ancestor with some shared implementation.
+
+Features:
+1 Can have both abstract and concrete methods.
+2 Can have instance variables and constructors.
+3 Supports multiple access modifiers (private, protected, public).
+4 A class can only inherit from one abstract class (single inheritance).
+Interfaces:
+
+Definition: An interface in Java is a reference type that can contain only abstract methods (until Java 8) and static constants. Starting with Java 8, interfaces can also contain default and static methods with a body.
+
+Usage: Interfaces are used to define a contract that classes must follow. They are ideal when you want to define a capability that multiple classes, possibly from different hierarchies, can implement.
+
+Features:
+
+1 Can only have abstract methods (until Java 8) and constants.
+2 Cannot have instance variables, constructors, or state.
+3  All methods are implicitly public and abstract, and all variables are public, static, and final.
+4 Supports multiple inheritance (a class can implement multiple interfaces).
+Example: Abstract Class vs. Interface
+
+Theory Part:
+
+Abstract Class Example: Consider a Vehicle class that serves as a base for different types of vehicles. The Vehicle class might have both abstract methods like startEngine() and concrete methods like stopEngine(), which are common to all vehicles.
+Interface Example: Consider an Electric interface that defines a contract for electric vehicles. It could include methods like chargeBattery(), which any electric vehicle should implement.
